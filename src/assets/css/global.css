@@ -34,6 +34,11 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+a {
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
 /* Guideline global styles setup */
 
 .global-headline {
