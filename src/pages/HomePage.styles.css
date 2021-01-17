@@ -1,0 +1,27 @@
+.home-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-content {
+  width: 90%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-content__title {
+  width: 100%;
+  text-align: center;
+}
+
+.search-group {
+  margin: 2em 0 4em;
+}
+
+form {
+  width: 100%;
+}
