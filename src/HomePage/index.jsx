@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Searchbar } from "../components/Searchbar";
-import "./HomePage.styles.css";
+import "./Home.styles.css";
 
-export const HomePage = () => {
+const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
@@ -23,3 +23,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+export default HomePage;
