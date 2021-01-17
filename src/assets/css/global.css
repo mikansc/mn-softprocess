@@ -33,3 +33,38 @@ body {
 body {
   font-family: "Montserrat", sans-serif;
 }
+
+/* Guideline global styles setup */
+
+.global-headline {
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.global-title {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.global-subtitle,
+.global-btn-label {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.textcolor-primary {
+  color: var(--color-primary);
+}
+
+.textcolor-black-87 {
+  color: var(--color-black-87);
+}
+.textcolor-black-54 {
+  color: var(--color-black-54);
+}
+.textcolor-black-38 {
+  color: var(--color-black-38);
+}
