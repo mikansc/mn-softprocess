@@ -1,0 +1,14 @@
+.process-container {
+  width: 100%;
+  padding: 1em 3em;
+  min-height: 100%;
+}
+
+.process-bar {
+  display: flex;
+  gap: 2em;
+}
+
+.process-content {
+  margin: 2em 0;
+}
