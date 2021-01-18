@@ -3,7 +3,7 @@ import { Searchbar } from "../components/Searchbar";
 import ProcessCard from "./components/ProcessCard";
 import "./Process.styles.css";
 
-const ProcessPage = () => {
+const ProcessListPage = () => {
   return (
     <div className="process-container">
       <div className="process-bar">
@@ -25,4 +25,4 @@ const ProcessPage = () => {
   );
 };
 
-export default ProcessPage;
+export default ProcessListPage;
