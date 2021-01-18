@@ -7,6 +7,7 @@ input.search-bar__field {
 button.search-bar__button {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .search-bar {
