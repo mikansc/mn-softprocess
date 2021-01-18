@@ -1,9 +1,15 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { Searchbar } from "../components/Searchbar";
 import "./Home.styles.css";
 
 const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const history = useHistory();
+
+  const temp_changePage = () => {
+    history.push("/process");
+  };
 
   return (
     <div class="home-container">
@@ -13,7 +19,11 @@ const HomePage = () => {
         </h1>
         <form>
           <div className="search-group">
-            <Searchbar term={searchTerm} handleSearchTerm={setSearchTerm} />
+            <Searchbar
+              term={searchTerm}
+              onTextInput={setSearchTerm}
+              onButtonClick={temp_changePage}
+            />
           </div>
         </form>
         <span>
