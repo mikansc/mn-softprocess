@@ -10,6 +10,12 @@ button.btn {
 }
 
 button.btn.primary {
-  color: var(--color-primary);
   border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+button.btn.filled {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: white;
 }
