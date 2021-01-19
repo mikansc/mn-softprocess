@@ -47,7 +47,7 @@ export default function Modal({ open, onClose, children }) {
         <button style={CLOSE_BUTTON_STYLES} onClick={closeButtonHandler}>
           <CloseIcon />
         </button>
-        {children}
+        <div style={{ clear: "both" }}>{children}</div>
       </div>
     </div>,
     document.getElementById("portal")
