@@ -1,13 +1,20 @@
 import "./Button.styles.css";
 
-const Button = ({ children, primary = false, filled = false, ...props }) => {
+const Button = (props) => {
+  const { children, primary = false, filled = false, onClick, ...rest } = props;
+
+  const onClickHandler = () => {
+    if (onClick) onClick();
+  };
+
   return (
     <button
-      {...props}
       className={`btn global-btn-label textcolor-black-38 
-        ${primary ? "primary" : ""}
-        ${filled ? "filled" : ""}
-      `}
+    ${primary ? "primary" : ""}
+    ${filled ? "filled" : ""}
+    `}
+      onClick={onClickHandler}
+      {...rest}
     >
       {children}
     </button>
