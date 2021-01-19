@@ -43,22 +43,6 @@
   margin-right: 0;
 }
 
-ul.detail-list {
-  margin: 0;
-  margin-bottom: 1em;
-  padding: 0.5em 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-ul.detail-list li {
-  width: 48%;
-  display: block;
-  line-height: 1.5em;
-}
-
 .detail-footer {
   margin-top: 2em;
   align-self: flex-end;
