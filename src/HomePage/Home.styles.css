@@ -19,9 +19,17 @@
 }
 
 .search-group {
+  width: 100%;
   margin: 2em 0 4em;
 }
 
-form {
-  width: 100%;
+button.new-process-link {
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: inherit;
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
 }
