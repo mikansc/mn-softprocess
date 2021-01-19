@@ -7,8 +7,8 @@ const HomePage = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const history = useHistory();
 
-  const temp_changePage = () => {
-    history.push("/process");
+  const handleSearch = () => {
+    history.push(`/process?q=${searchTerm}`);
   };
 
   return (
@@ -22,7 +22,7 @@ const HomePage = () => {
             <Searchbar
               term={searchTerm}
               onTextInput={setSearchTerm}
-              onSearch={temp_changePage}
+              onSearch={handleSearch}
             />
           </div>
         </form>
