@@ -22,7 +22,7 @@ const HomePage = () => {
             <Searchbar
               term={searchTerm}
               onTextInput={setSearchTerm}
-              onButtonClick={temp_changePage}
+              onSearch={temp_changePage}
             />
           </div>
         </form>
