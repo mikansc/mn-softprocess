@@ -1,7 +1,7 @@
 import { useHistory } from "react-router-dom";
 import Header from "../components/Header";
-import ProcessSmCard from "../ProcessDetailsPage/components/ProcessSmCard";
-import ProcessDetail from "./components/ProcessDetail";
+import SmallCard from "../ProcessDetailsPage/components/SmallCard";
+import DetailBox from "./components/DetailBox";
 
 import "./ProcessDetails.styles.css";
 
@@ -17,10 +17,10 @@ const ProcessDetailsPage = () => {
       <Header />
       <div className="details-content">
         <div className="details-content__left">
-          <ProcessSmCard onClick={temp_changePage} />
+          <SmallCard onClick={temp_changePage} />
         </div>
         <div className="details-content__right">
-          <ProcessDetail />
+          <DetailBox />
         </div>
       </div>
     </div>

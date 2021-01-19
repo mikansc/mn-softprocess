@@ -1,7 +1,7 @@
 import Label from "../../components/Label";
-import "./ProcessSmCard.styles.css";
+import "./SmallCard.styles.css";
 
-const ProcessSmCard = ({ onClick, selected = false }) => {
+const SmallCard = ({ onClick, selected = false }) => {
   const handleOnClick = () => {
     if (onClick) onClick();
   };
@@ -27,4 +27,4 @@ const ProcessSmCard = ({ onClick, selected = false }) => {
   );
 };
 
-export default ProcessSmCard;
+export default SmallCard;

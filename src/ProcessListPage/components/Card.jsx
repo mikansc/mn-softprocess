@@ -1,8 +1,8 @@
 import Label from "../../components/Label";
 import imagePlaceholder from "../../assets/images/placeholder.png";
-import "./ProcessCard.styles.css";
+import "./Card.styles.css";
 
-const ProcessCard = ({ onClick }) => {
+const Card = ({ onClick }) => {
   const handleOnClick = () => {
     if (onClick) onClick();
   };
@@ -28,4 +28,4 @@ const ProcessCard = ({ onClick }) => {
   );
 };
 
-export default ProcessCard;
+export default Card;

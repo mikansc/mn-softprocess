@@ -1,9 +1,9 @@
 import { Button } from "../../components/Button";
 import imagePlaceholder from "../../assets/images/placeholder.png";
 
-import "./ProcessDetail.styles.css";
+import "./DetailBox.styles.css";
 
-const ProcessDetail = () => {
+const DetailBox = () => {
   return (
     <div className="detail-box-container">
       <div className="detail-header">
@@ -68,4 +68,4 @@ const ProcessDetail = () => {
   );
 };
 
-export default ProcessDetail;
+export default DetailBox;
