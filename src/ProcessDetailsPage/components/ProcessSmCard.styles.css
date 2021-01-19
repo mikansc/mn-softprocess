@@ -1,0 +1,34 @@
+.process-card-sm {
+  width: 100%;
+  min-height: 120px;
+  border: 1px solid var(--color-black-38);
+  box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
+  padding: 0.5em;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.process-card-sm__img {
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+.process-card-sm__img img {
+  max-width: 100%;
+}
+.process-card-sm__data {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.selected {
+  border: 2px solid var(--color-primary);
+}
