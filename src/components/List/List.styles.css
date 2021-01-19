@@ -1,0 +1,45 @@
+.detail-info h2 {
+  margin-bottom: 0.25em;
+}
+
+.detail-info span {
+  color: inherit;
+  font-size: inherit;
+}
+
+ul.detail-list {
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0.5em 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+ul.detail-list li {
+  width: 48%;
+  min-width: 250px;
+  display: block;
+  line-height: 1.5em;
+}
+
+/* delete button */
+
+button.delete-button {
+  display: none;
+  padding: 0 0.5em;
+  margin-left: 0.75em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button.delete-button span {
+  font-size: 1rem;
+  color: inherit;
+}
+
+ul.detail-list li:hover > .delete-button {
+  display: inline-block;
+}
