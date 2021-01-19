@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Searchbar } from "../components/Searchbar";
+import Searchbar from "../components/Searchbar";
 import "./Home.styles.css";
 
 const HomePage = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "../Button";
-import { Searchbar } from "../Searchbar";
+import Searchbar from "../Searchbar";
 
 const Header = () => {
   return (
