@@ -3,12 +3,12 @@ import "./Label.styles.css";
 const Label = ({ text, children, smallCard = false, selected = false }) => {
   return (
     <div className={`process-card__info ${smallCard ? "shrink" : ""}`}>
-      <div
+      <h3
         style={selected ? { color: "var(--color-primary)" } : null}
         className="global-subtitle textcolor-black-54"
       >
         {text}
-      </div>
+      </h3>
       <span style={selected ? { color: "var(--color-primary)" } : null}>
         {children}
       </span>
