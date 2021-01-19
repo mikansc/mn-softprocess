@@ -1,5 +1,6 @@
 import HomePage from "../HomePage";
-import ProcessPage from "../ProcessPage";
+import ProcessDetailsPage from "../ProcessDetailsPage";
+import ProcessListPage from "../ProcessListPage";
 
 const routes = [
   {
@@ -9,7 +10,12 @@ const routes = [
   },
   {
     path: "/process",
-    component: ProcessPage,
+    component: ProcessListPage,
+    exact: true,
+  },
+  {
+    path: "/process/:id",
+    component: ProcessDetailsPage,
   },
 ];
 
