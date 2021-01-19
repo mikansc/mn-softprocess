@@ -1,25 +1,26 @@
+import { useHistory } from "react-router-dom";
 import { Button } from "../components/Button";
+import Header from "../components/Header";
 import { Searchbar } from "../components/Searchbar";
 import ProcessCard from "./components/ProcessCard";
 import "./Process.styles.css";
 
 const ProcessListPage = () => {
+  const history = useHistory();
+
+  const temp_changePage = () => {
+    history.push("/process/1");
+  };
   return (
     <div className="process-container">
-      <div className="process-bar">
-        <h1 className="global-title">
-          Busca de <br /> processos
-        </h1>
-        <Searchbar />
-        <Button type="button">NOVO</Button>
-      </div>
+      <Header />
       <div className="process-content">
-        <ProcessCard />
-        <ProcessCard />
-        <ProcessCard />
-        <ProcessCard />
-        <ProcessCard />
-        <ProcessCard />
+        <ProcessCard onClick={temp_changePage} />
+        <ProcessCard onClick={temp_changePage} />
+        <ProcessCard onClick={temp_changePage} />
+        <ProcessCard onClick={temp_changePage} />
+        <ProcessCard onClick={temp_changePage} />
+        <ProcessCard onClick={temp_changePage} />
       </div>
     </div>
   );
