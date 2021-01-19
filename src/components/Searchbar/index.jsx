@@ -1,7 +1,7 @@
 import SearchIcon from "@material-ui/icons/Search";
 import "./Searchbar.styles.css";
 
-const Searchbar = ({ term, onTextInput, onButtonClick }) => {
+const Searchbar = ({ term, onTextInput, onSearch }) => {
   const textInputHandler = (e) => {
     if (onTextInput) {
       onTextInput(e.target.value);
@@ -10,8 +10,8 @@ const Searchbar = ({ term, onTextInput, onButtonClick }) => {
 
   const buttonClickHandler = (e) => {
     e.preventDefault();
-    if (onButtonClick) {
-      onButtonClick();
+    if (onSearch) {
+      onSearch();
     }
   };
 
