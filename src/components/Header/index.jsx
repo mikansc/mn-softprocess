@@ -7,10 +7,10 @@ import Searchbar from "../Searchbar";
 import "./Header.styles.css";
 
 const Header = ({ onClickSearchButton }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const headerNovoButtonHandler = () => {
-    setIsOpen(true);
+    setIsModalOpen(true);
   };
 
   const headerSearchHandler = () => {
@@ -32,7 +32,7 @@ const Header = ({ onClickSearchButton }) => {
           NOVO
         </Button>
       </div>
-      <Modal open={isOpen} onClose={() => setIsOpen(false)}>
+      <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <ProcessNewModal />
       </Modal>
     </>
