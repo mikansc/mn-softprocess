@@ -45,6 +45,11 @@ a {
   color: var(--color-primary);
 }
 
+p {
+  margin: 1em 0;
+  line-height: 1.75em;
+}
+
 /* Guideline global styles setup */
 
 .global-headline {
