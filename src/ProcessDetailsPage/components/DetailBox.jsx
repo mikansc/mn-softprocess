@@ -1,4 +1,4 @@
-import { Button } from "../../components/Button";
+import Button from "../../components/Button";
 import imagePlaceholder from "../../assets/images/placeholder.png";
 
 import "./DetailBox.styles.css";

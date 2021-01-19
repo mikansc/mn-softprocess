@@ -1,6 +1,6 @@
 import "./Button.styles.css";
 
-export const Button = ({ children, primary = false, ...props }) => {
+const Button = ({ children, primary = false, ...props }) => {
   return (
     <button
       {...props}
@@ -12,3 +12,5 @@ export const Button = ({ children, primary = false, ...props }) => {
     </button>
   );
 };
+
+export default Button;
