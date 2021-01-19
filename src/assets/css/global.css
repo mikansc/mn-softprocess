@@ -55,6 +55,14 @@ a {
   color: var(--color-primary);
 }
 
+input,
+textarea {
+  padding: 0.75em 2px;
+  font-size: 1rem;
+  color: inherit;
+  font-family: inherit;
+}
+
 p {
   margin: 1em 0;
   line-height: 1.75em;
