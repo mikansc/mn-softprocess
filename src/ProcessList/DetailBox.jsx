@@ -6,6 +6,7 @@ import imagePlaceholder from "../assets/images/placeholder.png";
 import "./DetailBox.styles.css";
 import List from "../components/List";
 import ProcessEditModal from "../ProcessEditModal";
+import ProcessDeleteModal from "../ProcessDeleteModal";
 
 const DetailBox = ({ selectedProcess }) => {
   const [openEditModal, setOpenEditModal] = useState(false);
@@ -50,22 +51,10 @@ const DetailBox = ({ selectedProcess }) => {
           </div>
         </div>
         <div className="detail-content">
-          <List title="Interessados" items={[]} />
+          <List title="Interessados" items={selectedProcess.interessados} />
           <div className="detail-info">
             <h2 className="global-subtitle textcolor-black-54">Descrição</h2>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. At quod
-              explicabo culpa fugiat delectus provident officiis cum eaque.
-              Laboriosam pariatur asperiores facere? Commodi ipsa ab rerum
-              delectus provident minima deleniti voluptas quisquam reprehenderit
-              debitis dicta, praesentium, laborum, tempora odio accusantium?
-            </p>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus
-              eaque, possimus nesciunt molestiae praesentium sed provident
-              tempore sunt dicta perspiciatis labore ab temporibus? Incidunt
-              soluta repellendus explicabo. Nesciunt, fuga eaque!
-            </p>
+            {selectedProcess.descricao}
           </div>
         </div>
         <div className="detail-footer">
@@ -75,20 +64,19 @@ const DetailBox = ({ selectedProcess }) => {
           </Button>
         </div>
       </div>
+
       <Modal open={openDeleteModal} onClose={() => setOpenDeleteModal(false)}>
-        <h1 className="global-title">
-          Remover processo <strong>000000</strong>
-        </h1>
-        <p>
-          Tem certeza que deseja remover o processo n. <strong>000000</strong> ?
-        </p>
-        <Button>Confirmar</Button>{" "}
-        <Button filled onClick={() => setOpenDeleteModal(false)}>
-          Cancelar
-        </Button>
+        <ProcessDeleteModal
+          process={selectedProcess}
+          onCancel={() => setOpenDeleteModal(false)}
+        />
       </Modal>
+
       <Modal open={openEditModal} onClose={() => setOpenEditModal(false)}>
-        <ProcessEditModal />
+        <ProcessEditModal
+          process={selectedProcess}
+          onCancel={() => setOpenEditModal(false)}
+        />
       </Modal>
     </>
   );
