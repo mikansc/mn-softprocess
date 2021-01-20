@@ -32,9 +32,8 @@ export default function Input(props) {
           autoFocus={autofocus}
           readOnly={readonly}
           {...rest}
-        >
-          {value}
-        </textarea>
+          value={value}
+        />
       ) : (
         <input
           id={id}
