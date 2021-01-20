@@ -4,7 +4,7 @@ import ProcessAPI from "../services/AxiosProcessService";
 import DefaultPage from "../components/DefaultPage";
 import DetailBox from "./DetailBox";
 import Card from "./Card";
-import "./Process.styles.css";
+import "./ProcessList.styles.css";
 
 const ProcessList = () => {
   const [processList, setProcessList] = useState([]);
