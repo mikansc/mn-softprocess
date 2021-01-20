@@ -1,5 +1,5 @@
-import Label from "../../components/Label";
-import imagePlaceholder from "../../assets/images/placeholder.png";
+import Label from "../components/Label";
+import imagePlaceholder from "../assets/images/placeholder.png";
 import "./Card.styles.css";
 
 const Card = (props) => {

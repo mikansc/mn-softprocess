@@ -1,11 +1,11 @@
 import { useState } from "react";
-import Button from "../../components/Button";
-import Modal from "../../components/Modal";
-import imagePlaceholder from "../../assets/images/placeholder.png";
+import Button from "../components/Button";
+import Modal from "../components/Modal";
+import imagePlaceholder from "../assets/images/placeholder.png";
 
 import "./DetailBox.styles.css";
-import List from "../../components/List";
-import ProcessEditModal from "../../ProcessEditModal";
+import List from "../components/List";
+import ProcessEditModal from "../ProcessEditModal";
 
 const DetailBox = ({ selectedProcess }) => {
   const [openEditModal, setOpenEditModal] = useState(false);

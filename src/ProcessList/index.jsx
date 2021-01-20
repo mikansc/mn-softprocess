@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useQuery } from "../hooks/useQuery";
 import ProcessAPI from "../services/AxiosProcessService";
 import DefaultPage from "../components/DefaultPage";
-import DetailBox from "./components/DetailBox";
-import Card from "./components/Card";
+import DetailBox from "./DetailBox";
+import Card from "./Card";
 import "./Process.styles.css";
 
 const ProcessList = () => {
