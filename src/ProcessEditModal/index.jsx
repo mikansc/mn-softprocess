@@ -1,12 +1,14 @@
+import { useState } from "react";
 import Input from "../components/Input";
 import List from "../components/List";
 import Button from "../components/Button";
 import "./ProcessEditModal.styles.css";
-import { useState } from "react";
 
-export default function ProcessEditModal() {
+export default function ProcessEditModal({ process, onCancel = null }) {
   const [interessado, setInteressado] = useState("");
-  const [interessados, setInteressados] = useState([]);
+  const [interessados, setInteressados] = useState(process.interessados);
+
+  if (!process) return null;
 
   const addInteressadoHandler = () => {
     if (interessado !== "") {
@@ -18,7 +20,7 @@ export default function ProcessEditModal() {
   return (
     <div className="process-new-container">
       <h2 className="global-title">
-        Editar processo <strong>OOOOOOO</strong>
+        Editar processo <strong>{process.numero}</strong>
       </h2>
       <div className="process-new-content">
         <div className="form-row">
@@ -28,8 +30,7 @@ export default function ProcessEditModal() {
               label="Assunto"
               name="assunto"
               id="assunto"
-              readonly
-              value="0000000"
+              value={process.assunto}
             />
           </div>
         </div>
@@ -69,6 +70,7 @@ export default function ProcessEditModal() {
         </div>
         <div className="form-footer">
           <Button filled>SALVAR</Button>
+          <Button onClick={onCancel}>Cancelar</Button>
         </div>
       </div>
     </div>
