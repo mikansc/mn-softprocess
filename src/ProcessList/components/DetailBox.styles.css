@@ -30,6 +30,9 @@
   display: flex;
   flex-wrap: wrap;
 }
+.detail-info {
+  min-width: 40%;
+}
 
 .detail-info h2 {
   margin-bottom: 0.25em;

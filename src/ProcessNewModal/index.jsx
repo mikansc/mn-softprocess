@@ -32,12 +32,10 @@ export default function ProcessNewModal() {
           </div>
         </div>
         <div className="form-row">
-          <div className="form-column">
-            <List canEdit title="Interessados" items={interessados} />
-          </div>
+          <List canEdit title="Interessados" items={interessados} />
         </div>
 
-        <div className="form-row">
+        <form className="form-row" onSubmit={(e) => e.preventDefault()}>
           <div className="form-column">
             <Input
               type="text"
@@ -54,7 +52,7 @@ export default function ProcessNewModal() {
               Adicionar
             </Button>
           </div>
-        </div>
+        </form>
 
         <div className="form-row">
           <Input

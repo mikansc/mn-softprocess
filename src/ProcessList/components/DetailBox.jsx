@@ -1,24 +1,17 @@
+import { useState } from "react";
 import Button from "../../components/Button";
 import Modal from "../../components/Modal";
 import imagePlaceholder from "../../assets/images/placeholder.png";
 
 import "./DetailBox.styles.css";
 import List from "../../components/List";
-import { useState } from "react";
 import ProcessEditModal from "../../ProcessEditModal";
 
-const TEMP_INTERESSADOS = [
-  "Danilo Barbosa Correia",
-  "Julia Barros Correia",
-  "Nicolas Araujo Castro",
-  "Antônio Ribeiro Fernandes",
-  "Manuela Oliveira Lima",
-  "Melissa Ribeiro Pinto",
-];
-
-const DetailBox = () => {
+const DetailBox = ({ selectedProcess }) => {
   const [openEditModal, setOpenEditModal] = useState(false);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
+
+  if (!selectedProcess) return null;
 
   const editButtonHandler = () => {
     setOpenEditModal(true);
@@ -33,31 +26,31 @@ const DetailBox = () => {
       <div className="detail-box-container">
         <div className="detail-header">
           <div className="detail-img">
-            <img src={imagePlaceholder} alt="detail " />
+            <img src={imagePlaceholder} alt={""} />
           </div>
           <div className="detail-data">
             <div className="detail-info">
               <h2 className="global-subtitle textcolor-black-54">Processo</h2>
               <span className="global-headline textcolor-black-87">
-                SOFT 0001/2018
+                {selectedProcess.numero}
               </span>
             </div>
             <div className="detail-info">
               <h2 className="global-subtitle textcolor-black-54">Data</h2>
               <span className="global-headline textcolor-black-87">
-                07/08/2018
+                {selectedProcess.entrada}
               </span>
             </div>
             <div className="detail-info">
               <h2 className="global-subtitle textcolor-black-54">Processo</h2>
               <span className="global-headline textcolor-black-87">
-                In vestibulum dis laroque Ac parturient dapibu
+                {selectedProcess.assunto}
               </span>
             </div>
           </div>
         </div>
         <div className="detail-content">
-          <List title="Interessados" items={TEMP_INTERESSADOS} />
+          <List title="Interessados" items={[]} />
           <div className="detail-info">
             <h2 className="global-subtitle textcolor-black-54">Descrição</h2>
             <p>

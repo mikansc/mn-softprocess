@@ -1,0 +1,27 @@
+.process-container {
+  width: 100%;
+  padding: 1em 3em;
+  min-height: 100%;
+}
+
+.process-content {
+  margin: 2em 0;
+  display: flex;
+  gap: 1em;
+}
+
+.cards {
+  width: 45%;
+}
+
+.process-content__full {
+  width: 100%;
+}
+
+.process-content__left {
+  width: 39%;
+}
+
+.process-content__right {
+  width: 59%;
+}
