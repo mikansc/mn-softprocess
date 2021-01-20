@@ -1,17 +1,18 @@
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+
 import SearchIcon from "@material-ui/icons/Search";
 import "./Searchbar.styles.css";
 
-const Searchbar = ({ term, onTextInput, onSearch }) => {
-  const textInputHandler = (e) => {
-    if (onTextInput) {
-      onTextInput(e.target.value);
-    }
-  };
+const Searchbar = () => {
+  const [term, setTerm] = useState("");
+  const history = useHistory();
 
-  const buttonClickHandler = (e) => {
-    e.preventDefault();
-    if (onSearch) {
-      onSearch();
+  const searchButtonHandler = () => {
+    if (!term.trim()) {
+      setTerm("");
+    } else {
+      history.push(`/process?q=${term}`);
     }
   };
 
@@ -22,12 +23,12 @@ const Searchbar = ({ term, onTextInput, onSearch }) => {
         type="text"
         placeholder="Pesquise por uma informação do processo"
         value={term}
-        onInput={textInputHandler}
+        onChange={(e) => setTerm(e.target.value)}
       />
       <button
         type="button"
         className="search-bar__button"
-        onClick={buttonClickHandler}
+        onClick={searchButtonHandler}
       >
         <SearchIcon style={{ color: "var(--color-black-38)" }} />
       </button>
