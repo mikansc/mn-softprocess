@@ -4,19 +4,14 @@ import ProcessNewModal from "../../ProcessNewModal";
 import Button from "../Button";
 import Modal from "../Modal";
 import Searchbar from "../Searchbar";
+
 import "./Header.styles.css";
 
-const Header = ({ onClickSearchButton }) => {
+const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const headerNovoButtonHandler = () => {
     setIsModalOpen(true);
-  };
-
-  const headerSearchHandler = () => {
-    if (onClickSearchButton) {
-      onClickSearchButton();
-    }
   };
 
   return (
@@ -27,7 +22,7 @@ const Header = ({ onClickSearchButton }) => {
             Busca de <br /> processos
           </h1>
         </Link>
-        <Searchbar onSearch={headerSearchHandler} />
+        <Searchbar />
         <Button onClick={headerNovoButtonHandler} type="button">
           NOVO
         </Button>
