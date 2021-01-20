@@ -22,6 +22,7 @@ const CONTENT_STYLES = {
   maxWidth: "840px",
   backgroundColor: "#FFF",
   padding: "1em",
+  boxShadow: "5px 10px 10px rgba(0, 0, 0, 0.3)",
 };
 
 const CLOSE_BUTTON_STYLES = {
