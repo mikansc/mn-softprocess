@@ -1,31 +1,41 @@
-.detail-info h2 {
+div.list-container {
+  width: 100%;
+  margin: 1em 0;
+}
+
+div.list-container > h2 {
   margin-bottom: 0.25em;
 }
 
-.detail-info span {
+div.list-container > span {
   color: inherit;
   font-size: inherit;
 }
 
-ul.detail-list {
-  margin: 0;
-  margin-bottom: 1em;
-  padding: 0.5em 0;
+ul.list-items {
   width: 100%;
+  max-height: 140px;
+  list-style: none;
+  overflow: auto;
+  margin: 0;
+  padding: 0.5em 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-ul.detail-list li {
-  width: 48%;
-  min-width: 250px;
+ul.list-items > li {
+  width: 50%;
+  min-width: 320px;
   display: block;
-  line-height: 1.5em;
+  line-height: 1.75em;
+}
+
+ul.list-items > li:hover {
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 /* delete button */
-
 button.delete-button {
   display: none;
   padding: 0 0.5em;
@@ -35,11 +45,11 @@ button.delete-button {
   cursor: pointer;
 }
 
-button.delete-button span {
+button.delete-button > span {
   font-size: 1rem;
   color: inherit;
 }
 
-ul.detail-list li:hover > .delete-button {
+ul.list-items > li:hover > button.delete-button {
   display: inline-block;
 }

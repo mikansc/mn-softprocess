@@ -3,10 +3,10 @@ import "./List.styles.css";
 
 export default function List({ title, items, canEdit }) {
   return (
-    <div className="detail-info">
+    <div className="list-container">
       <h2 className="global-subtitle textcolor-black-54">{title}</h2>
       {items && items.length > 0 ? (
-        <ul className="detail-list">
+        <ul className="list-items">
           {items.map((item, idx) => (
             <li key={`${item}-${idx}`}>
               {item}
