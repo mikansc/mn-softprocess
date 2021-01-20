@@ -5,19 +5,15 @@
   gap: 0.5em;
 }
 
-.input-group input {
+div.input-group > input {
   width: 100%;
   border: none;
   border-bottom: 2px solid var(--color-black-54);
 }
 
-.input-group textarea {
+div.input-group > textarea {
   resize: vertical;
   overflow: auto;
   border: none;
   border-bottom: 2px solid var(--color-black-54);
-}
-.input-group textarea[read-only="true"],
-.input-group input[read-only="true"] {
-  outline: none;
 }
