@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="process-bar">
+      <div className="header-bar">
         <Link className="header-link" to="/">
           <h1 className="global-title">
             Busca de <br /> processos
