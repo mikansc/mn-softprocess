@@ -1,4 +1,4 @@
-.delete-modal-footer {
+div.delete-modal-footer {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
