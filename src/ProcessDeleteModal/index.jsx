@@ -8,7 +8,7 @@ export default function ProcessDeleteModal({ process, onCancel }) {
         Remover processo <strong>{process.numero}</strong>
       </h1>
       <p>Tem certeza que deseja remover o processo n. {process.numero}?</p>
-      <div className="form-footer">
+      <div className="delete-modal-footer">
         <Button primary>Confirmar</Button>
         <Button filled onClick={onCancel}>
           Cancelar
