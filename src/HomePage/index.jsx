@@ -34,7 +34,7 @@ const HomePage = () => {
         </div>
       </div>
       <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <ProcessNewModal />
+        <ProcessNewModal close={() => setIsModalOpen(false)} />
       </Modal>
     </>
   );
