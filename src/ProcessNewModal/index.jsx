@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Input from "../components/Input";
 import List from "../components/List";
 import Button from "../components/Button";
+import ProcessAPI from "../services/AxiosProcessService";
 import "./ProcessNewModal.styles.css";
-import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 export default function ProcessNewModal() {
   const [interessado, setInteressado] = useState("");
@@ -17,10 +19,16 @@ export default function ProcessNewModal() {
     }
   };
 
+  const history = useHistory();
+
   const saveNewProcessHandler = () => {
-    console.log({
+    const newProcess = {
+      assunto,
       interessados,
-    });
+      descricao,
+    };
+    ProcessAPI.createProcess(newProcess);
+    history.push("/");
   };
 
   return (
@@ -35,7 +43,7 @@ export default function ProcessNewModal() {
               name="assunto"
               id="assunto"
               value={assunto}
-              onChange={setAssunto}
+              onChange={(e) => setAssunto(e.target.value)}
               placeholder="Digite o assunto..."
               autofocus
             />
@@ -73,7 +81,7 @@ export default function ProcessNewModal() {
             name="descricao"
             id="descricao"
             value={descricao}
-            onChange={setDescricao}
+            onChange={(e) => setDescricao(e.target.value)}
             placeholder="Digite a descrição do processo..."
           />
         </div>

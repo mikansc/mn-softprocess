@@ -17,6 +17,16 @@ class ProcessApi {
 
     return response;
   }
+
+  createProcess(processData) {
+    const response = this.axiosInstance.post("/processo", processData, {
+      headers: {
+        "Content-type": "application/json",
+      },
+    });
+
+    return response;
+  }
 }
 
 export default new ProcessApi(BASE_URL);
