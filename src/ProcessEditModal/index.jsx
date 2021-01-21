@@ -57,7 +57,7 @@ export default function ProcessEditModal({ process, onCancel = null }) {
           </div>
         </div>
 
-        <div className="form-row">
+        <form className="form-row" onSubmit={(e) => e.preventDefault()}>
           <div className="form-column">
             <Input
               type="text"
@@ -74,7 +74,7 @@ export default function ProcessEditModal({ process, onCancel = null }) {
               Adicionar
             </Button>
           </div>
-        </div>
+        </form>
 
         <div className="form-row">
           <Input
