@@ -3,6 +3,13 @@ div.header-bar {
   gap: 2em;
 }
 
+@media screen and (max-width: 640px) {
+  div.header-bar {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
 a.header-link {
   text-decoration: none;
   color: inherit;
