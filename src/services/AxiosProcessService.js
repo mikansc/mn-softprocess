@@ -27,6 +27,10 @@ class ProcessApi {
 
     return response;
   }
+
+  deleteProcess(processId) {
+    return this.axiosInstance.delete(`/processo/${processId}`);
+  }
 }
 
 export default new ProcessApi(BASE_URL);
