@@ -1,17 +1,14 @@
 section.process-content {
   margin: 2em 0;
+  width: 100%;
   display: flex;
   gap: 1em;
 }
 
-div.process-content__full {
+div.process-content__left {
   width: 100%;
 }
 
-div.process-content__left {
-  width: 39%;
-}
-
 div.process-content__right {
-  width: 59%;
+  width: 160%;
 }

@@ -43,7 +43,7 @@ const ProcessList = () => {
   return (
     <DefaultPage>
       <section className="process-content">
-        <div className={`process-content__${hasSelected ? "left" : "full"}`}>
+        <div className="process-content__left">
           {loading ? <p>Carregando...</p> : null}
           {processList.length > 0 ? (
             processList.map((process) => (
