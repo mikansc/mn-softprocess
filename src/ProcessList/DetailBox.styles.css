@@ -1,5 +1,4 @@
-/* details box */
-.detail-box-container {
+aside.detail-box-container {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -8,13 +7,13 @@
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.3);
 }
 
-.detail-header {
+div.detail-header {
   display: flex;
   gap: 1em;
   margin-bottom: 1em;
 }
 
-.detail-img {
+div.detail-img {
   min-width: 120px;
   width: 120px;
   min-height: 120px;
@@ -22,31 +21,28 @@
   overflow: hidden;
 }
 
-.detail-img img {
+div.detail-img > img {
   width: 100%;
 }
 
-.detail-data {
+div.detail-data {
   display: flex;
   flex-wrap: wrap;
 }
-.detail-info {
+div.detail-data > div.detail-info {
   min-width: 40%;
-}
-
-.detail-info h2 {
-  margin-bottom: 0.25em;
-}
-
-.detail-data .detail-info {
   margin-right: 2em;
 }
 
-.detail-data .detail-info:last-child {
+div.detail-data > .detail-info > h2 {
+  margin-bottom: 0.25em;
+}
+
+div.detail-data > div.detail-info:last-child {
   margin-right: 0;
 }
 
-.detail-footer {
+div.detail-footer {
   margin-top: 2em;
   align-self: flex-end;
 }

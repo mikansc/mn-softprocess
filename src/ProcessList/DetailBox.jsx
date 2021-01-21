@@ -24,7 +24,7 @@ const DetailBox = ({ selectedProcess }) => {
 
   return (
     <>
-      <div className="detail-box-container">
+      <aside className="detail-box-container">
         <div className="detail-header">
           <div className="detail-img">
             <img src={imagePlaceholder} alt={""} />
@@ -63,7 +63,7 @@ const DetailBox = ({ selectedProcess }) => {
             Editar
           </Button>
         </div>
-      </div>
+      </aside>
 
       <Modal open={openDeleteModal} onClose={() => setOpenDeleteModal(false)}>
         <ProcessDeleteModal
