@@ -1,7 +1,10 @@
 import { useHistory } from "react-router-dom";
-import Button from "../components/Button";
 import ProcessAPI from "../services/AxiosProcessService";
-import "./ProcessDeleteModal.styles.css";
+import Button from "../components/Button";
+import {
+  Content,
+  ModalContainer,
+} from "../components/Modal/ModalContainer/ModalContainer";
 
 export default function ProcessDeleteModal({ process, onCancel }) {
   const history = useHistory();
@@ -12,19 +15,16 @@ export default function ProcessDeleteModal({ process, onCancel }) {
   };
 
   return (
-    <div>
-      <h1 className="global-title">
-        Remover processo <strong>{process.numero}</strong>
-      </h1>
-      <p>Tem certeza que deseja remover o processo n. {process.numero}?</p>
-      <div className="delete-modal-footer">
+    <ModalContainer title={`Remover processo ${process.numero}`}>
+      <p>Tem certeza que deseja remover o processo {process.numero}?</p>
+      <Content.Footer>
         <Button primary onClick={deleteHandler}>
           Confirmar
         </Button>
         <Button filled onClick={onCancel}>
           Cancelar
         </Button>
-      </div>
-    </div>
+      </Content.Footer>
+    </ModalContainer>
   );
 }

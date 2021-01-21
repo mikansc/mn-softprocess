@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import ProcessAPI from "../services/AxiosProcessService";
 import Input from "../components/Input";
+import {
+  ModalContainer,
+  Content,
+} from "../components/Modal/ModalContainer/ModalContainer";
 import List from "../components/List";
 import Button from "../components/Button";
-import ProcessAPI from "../services/AxiosProcessService";
-import "./ProcessNewModal.styles.css";
-import { useHistory } from "react-router-dom";
 
 export default function ProcessNewModal() {
   const [interessado, setInteressado] = useState("");
@@ -37,70 +40,65 @@ export default function ProcessNewModal() {
   };
 
   return (
-    <div className="process-new-container">
-      <h2 className="global-title">Cadastro de processo</h2>
-      <div className="process-new-content">
-        <div className="form-row">
-          <div className="form-column">
-            <Input
-              type="text"
-              label="Assunto"
-              name="assunto"
-              id="assunto"
-              value={assunto}
-              onChange={(e) => setAssunto(e.target.value)}
-              placeholder="Digite o assunto..."
-              autofocus
-            />
-          </div>
-        </div>
-        <div className="form-row">
-          <div className="form-column">
-            <List
-              canEdit
-              title="Interessados"
-              items={interessados}
-              onDelete={deleteInteressadoHandler}
-            />
-          </div>
-        </div>
-
-        <form className="form-row" onSubmit={(e) => e.preventDefault()}>
-          <div className="form-column">
-            <Input
-              type="text"
-              label="Novo interessado"
-              name="interessado"
-              id="interessado"
-              value={interessado}
-              onChange={(e) => setInteressado(e.target.value)}
-              placeholder="Digite o nome do interessado..."
-            />
-          </div>
-          <div className="form-column">
-            <Button type="submit" onClick={addInteressadoHandler}>
-              Adicionar
-            </Button>
-          </div>
-        </form>
-
-        <div className="form-row">
+    <ModalContainer title="Cadastro de processo">
+      <Content.Row>
+        <Content.Column>
           <Input
-            type="textarea"
-            label="Descrição"
-            name="descricao"
-            id="descricao"
-            value={descricao}
-            onChange={(e) => setDescricao(e.target.value)}
-            placeholder="Digite a descrição do processo..."
+            type="text"
+            label="Assunto"
+            name="assunto"
+            id="assunto"
+            value={assunto}
+            onChange={(e) => setAssunto(e.target.value)}
+            placeholder="Digite o assunto..."
+            autofocus
           />
-        </div>
-        <div className="form-footer">
-          <Button filled onClick={saveNewProcessHandler}>
-            SALVAR
+        </Content.Column>
+      </Content.Row>
+      <Content.Row>
+        <Content.Column>
+          <List
+            canEdit
+            title="Interessados"
+            items={interessados}
+            onDelete={deleteInteressadoHandler}
+          />
+        </Content.Column>
+      </Content.Row>
+      <Content.Form>
+        <Content.Column>
+          <Input
+            type="text"
+            label="Novo interessado"
+            name="interessado"
+            id="interessado"
+            value={interessado}
+            onChange={(e) => setInteressado(e.target.value)}
+            placeholder="Digite o nome do interessado..."
+          />
+        </Content.Column>
+        <Content.Column>
+          <Button type="submit" onClick={addInteressadoHandler}>
+            Adicionar
           </Button>
-        </div>
-      </div>
-    </div>
+        </Content.Column>
+      </Content.Form>
+      <Content.Row>
+        <Input
+          type="textarea"
+          label="Descrição"
+          name="descricao"
+          id="descricao"
+          value={descricao}
+          onChange={(e) => setDescricao(e.target.value)}
+          placeholder="Digite a descrição do processo..."
+        />
+      </Content.Row>
+      <Content.Footer>
+        <Button filled onClick={saveNewProcessHandler}>
+          SALVAR
+        </Button>
+      </Content.Footer>
+    </ModalContainer>
   );
 }
