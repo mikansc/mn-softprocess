@@ -49,6 +49,7 @@ const ProcessList = () => {
             processList.map((process) => (
               <Card
                 key={process.id}
+                selected={hasSelected && process.id === processSelected.id}
                 process={process}
                 isSmall={hasSelected}
                 onClick={() => setSelectedCard(process.id)}

@@ -12,6 +12,11 @@ article.card {
   cursor: pointer;
 }
 
+article.card.selected {
+  border: 3px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
 div.card__img {
   width: 100px;
   min-width: 100px;
