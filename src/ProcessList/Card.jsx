@@ -10,13 +10,13 @@ const Card = (props) => {
   };
 
   return (
-    <div tabIndex="0" className="process-card" onClick={handleOnClick}>
+    <article tabIndex="0" className="card" onClick={handleOnClick}>
       {!isSmall && (
-        <div className="process-card__img">
+        <div className="card__img">
           <img src={imagePlaceholder} alt="img" />
         </div>
       )}
-      <div className={`process-card__${isSmall ? "small" : "full"}`}>
+      <div className={`card__${isSmall ? "small" : "full"}`}>
         <Label smallLabel={isSmall} text="Número">
           {process.numero}
         </Label>
@@ -28,7 +28,7 @@ const Card = (props) => {
         </Label>
         {!isSmall && <Label text="Descrição">{process.descricao}</Label>}
       </div>
-    </div>
+    </article>
   );
 };
 
