@@ -12,8 +12,8 @@ class ProcessApi {
         return res;
       },
       (error) => {
-        let message = "";
-        switch (error.response.data.status) {
+        let message;
+        switch (error.response.status) {
           case 400:
             message = "Não foi possível processar a requisição.";
             break;
