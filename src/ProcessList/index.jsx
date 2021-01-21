@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useQuery } from "../hooks/useQuery";
+import { toast } from "react-toastify";
 import ProcessAPI from "../services/AxiosProcessService";
 import DefaultPage from "../components/DefaultPage";
 import DetailBox from "./DetailBox";
@@ -24,7 +25,7 @@ const ProcessList = () => {
         setProcessList(res.data);
       })
       .catch((error) => {
-        throw error;
+        toast.error(error);
       })
       .finally(() => setLoading(false));
   }, [term]);
