@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import ProcessAPI from "../services/AxiosProcessService";
 import Input from "../components/Input";
 import {
@@ -9,7 +9,7 @@ import {
 import List from "../components/List";
 import Button from "../components/Button";
 
-export default function ProcessNewModal() {
+export default function ProcessNewModal({ close = null }) {
   const [interessado, setInteressado] = useState("");
   const [interessados, setInteressados] = useState([]);
   const [assunto, setAssunto] = useState("");
@@ -27,16 +27,22 @@ export default function ProcessNewModal() {
     setInteressados(filtered);
   };
 
-  const history = useHistory();
-
   const saveNewProcessHandler = () => {
     const newProcess = {
       assunto,
       interessados,
       descricao,
     };
-    ProcessAPI.createProcess(newProcess);
-    history.push("/");
+    ProcessAPI.createProcess(newProcess)
+      .then(() => {
+        return toast.info("Processo criado com sucesso!");
+      })
+      .catch((error) => {
+        return toast.error(error);
+      })
+      .finally(() => {
+        close();
+      });
   };
 
   return (

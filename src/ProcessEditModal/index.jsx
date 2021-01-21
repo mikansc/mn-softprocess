@@ -1,4 +1,7 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import ProcessAPI from "../services/AxiosProcessService";
 import Input from "../components/Input";
 import List from "../components/List";
 import Button from "../components/Button";
@@ -12,6 +15,7 @@ export default function ProcessEditModal({ process, onCancel = null }) {
   const [assunto, setAssunto] = useState("");
   const [interessados, setInteressados] = useState([]);
   const [descricao, setDescricao] = useState("");
+  const history = useHistory();
 
   const {
     assunto: pAssunto,
@@ -32,13 +36,23 @@ export default function ProcessEditModal({ process, onCancel = null }) {
     }
   };
 
-  const deleteInteressadoHandler = (name) => {
+  const handleDeleteInteressado = (name) => {
     const filtered = interessados.filter((person) => !person.includes(name));
     setInteressados(filtered);
   };
 
   const handleUpdateProcess = () => {
-    console.log({ id: process.id, assunto, interessados, descricao });
+    const updatedProcess = { assunto, interessados, descricao };
+    ProcessAPI.updateProcess(process.id, updatedProcess)
+      .then(() => {
+        return toast.info("Processo atualizado com sucesso!");
+      })
+      .catch((error) => {
+        return toast.error(error);
+      })
+      .finally(() => {
+        history.push("/");
+      });
   };
 
   return (
@@ -51,7 +65,7 @@ export default function ProcessEditModal({ process, onCancel = null }) {
             name="assunto"
             id="assunto"
             value={assunto}
-            onChange={setAssunto}
+            onChange={(e) => setAssunto(e.target.value)}
           />
         </Content.Column>
       </Content.Row>
@@ -61,7 +75,7 @@ export default function ProcessEditModal({ process, onCancel = null }) {
             canEdit
             title="Interessados"
             items={interessados}
-            onDelete={deleteInteressadoHandler}
+            onDelete={handleDeleteInteressado}
           />
         </Content.Column>
       </Content.Row>
@@ -91,7 +105,7 @@ export default function ProcessEditModal({ process, onCancel = null }) {
           id="descricao"
           placeholder="Digite a descrição do processo..."
           value={descricao}
-          onChange={setDescricao}
+          onChange={(e) => setDescricao(e.target.value)}
         />
       </Content.Row>
       <Content.Footer>

@@ -1,4 +1,5 @@
 import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
 import ProcessAPI from "../services/AxiosProcessService";
 import Button from "../components/Button";
 import {
@@ -10,8 +11,16 @@ export default function ProcessDeleteModal({ process, onCancel }) {
   const history = useHistory();
 
   const deleteHandler = () => {
-    ProcessAPI.deleteProcess(process.id);
-    history.push("/");
+    ProcessAPI.deleteProcess(process.id)
+      .then(() => {
+        return toast.info("Processo removido com sucesso!");
+      })
+      .catch((error) => {
+        return toast.error(error);
+      })
+      .finally(() => {
+        history.push("/");
+      });
   };
 
   return (
