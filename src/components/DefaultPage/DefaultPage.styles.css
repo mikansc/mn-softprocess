@@ -3,3 +3,11 @@ main.default-container {
   padding: 1em 3em;
   min-height: 100%;
 }
+
+@media screen and (max-width: 390px) {
+  main.default-container {
+    width: 95%;
+    padding: 1em 0;
+    margin: 0 auto;
+  }
+} ;
