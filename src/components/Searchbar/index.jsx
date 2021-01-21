@@ -1,12 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import SearchIcon from "@material-ui/icons/Search";
 import "./Searchbar.styles.css";
+import { useQuery } from "../../hooks/useQuery";
 
 const Searchbar = () => {
   const [term, setTerm] = useState("");
   const history = useHistory();
+  const query = useQuery();
+  const q = query.get("q");
+
+  useEffect(() => {
+    if (q) setTerm(q);
+  }, [q]);
 
   const searchButtonHandler = () => {
     if (!term.trim()) {
