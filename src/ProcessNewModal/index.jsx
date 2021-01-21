@@ -19,6 +19,11 @@ export default function ProcessNewModal() {
     }
   };
 
+  const deleteInteressadoHandler = (name) => {
+    const filtered = interessados.filter((person) => !person.includes(name));
+    setInteressados(filtered);
+  };
+
   const history = useHistory();
 
   const saveNewProcessHandler = () => {
@@ -51,7 +56,12 @@ export default function ProcessNewModal() {
         </div>
         <div className="form-row">
           <div className="form-column">
-            <List canEdit title="Interessados" items={interessados} />
+            <List
+              canEdit
+              title="Interessados"
+              items={interessados}
+              onDelete={deleteInteressadoHandler}
+            />
           </div>
         </div>
 
@@ -60,8 +70,8 @@ export default function ProcessNewModal() {
             <Input
               type="text"
               label="Novo interessado"
-              name="listaInteressados"
-              id="listaInteressados"
+              name="interessado"
+              id="interessado"
               value={interessado}
               onChange={(e) => setInteressado(e.target.value)}
               placeholder="Digite o assunto..."

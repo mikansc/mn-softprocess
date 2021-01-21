@@ -29,6 +29,11 @@ export default function ProcessEditModal({ process, onCancel = null }) {
     }
   };
 
+  const deleteInteressadoHandler = (name) => {
+    const filtered = interessados.filter((person) => !person.includes(name));
+    setInteressados(filtered);
+  };
+
   const handleUpdateProcess = () => {
     console.log({ id: process.id, assunto, interessados, descricao });
   };
@@ -53,7 +58,12 @@ export default function ProcessEditModal({ process, onCancel = null }) {
         </div>
         <div className="form-row">
           <div className="form-column">
-            <List canEdit title="Interessados" items={interessados} />
+            <List
+              canEdit
+              title="Interessados"
+              items={interessados}
+              onDelete={deleteInteressadoHandler}
+            />
           </div>
         </div>
 
