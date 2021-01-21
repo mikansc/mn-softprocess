@@ -7,12 +7,20 @@ import { useState } from "react";
 export default function ProcessNewModal() {
   const [interessado, setInteressado] = useState("");
   const [interessados, setInteressados] = useState([]);
+  const [assunto, setAssunto] = useState("");
+  const [descricao, setDescricao] = useState("");
 
   const addInteressadoHandler = () => {
     if (interessado !== "") {
       setInteressados([...interessados, interessado]);
       setInteressado("");
     }
+  };
+
+  const saveNewProcessHandler = () => {
+    console.log({
+      interessados,
+    });
   };
 
   return (
@@ -26,13 +34,17 @@ export default function ProcessNewModal() {
               label="Assunto"
               name="assunto"
               id="assunto"
+              value={assunto}
+              onChange={setAssunto}
               placeholder="Digite o assunto..."
               autofocus
             />
           </div>
         </div>
         <div className="form-row">
-          <List canEdit title="Interessados" items={interessados} />
+          <div className="form-column">
+            <List canEdit title="Interessados" items={interessados} />
+          </div>
         </div>
 
         <form className="form-row" onSubmit={(e) => e.preventDefault()}>
@@ -57,14 +69,18 @@ export default function ProcessNewModal() {
         <div className="form-row">
           <Input
             type="textarea"
-            label="Novo interessado"
-            name="listaInteressados"
-            id="assunto"
+            label="Descrição"
+            name="descricao"
+            id="descricao"
+            value={descricao}
+            onChange={setDescricao}
             placeholder="Digite a descrição do processo..."
           />
         </div>
         <div className="form-footer">
-          <Button filled>SALVAR</Button>
+          <Button filled onClick={saveNewProcessHandler}>
+            SALVAR
+          </Button>
         </div>
       </div>
     </div>

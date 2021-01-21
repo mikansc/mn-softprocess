@@ -12,7 +12,8 @@ div.process-new-content {
   flex-direction: column;
 }
 
-div.form-row {
+div.form-row,
+form.form-row {
   width: 100%;
   display: flex;
   gap: 1em;
