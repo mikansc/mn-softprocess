@@ -74,7 +74,7 @@ export default function ProcessNewModal() {
               id="interessado"
               value={interessado}
               onChange={(e) => setInteressado(e.target.value)}
-              placeholder="Digite o assunto..."
+              placeholder="Digite o nome do interessado..."
             />
           </div>
           <div className="form-column">
