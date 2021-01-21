@@ -42,7 +42,7 @@ const ProcessList = () => {
 
   return (
     <DefaultPage>
-      <div className="process-content">
+      <section className="process-content">
         <div className={`process-content__${hasSelected ? "left" : "full"}`}>
           {loading ? <p>Carregando...</p> : null}
           {processList.length > 0 ? (
@@ -63,7 +63,7 @@ const ProcessList = () => {
             <DetailBox selectedProcess={processSelected} />
           </div>
         )}
-      </div>
+      </section>
     </DefaultPage>
   );
 };
