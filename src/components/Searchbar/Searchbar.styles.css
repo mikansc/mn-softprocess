@@ -4,7 +4,7 @@ button.search-bar__button {
   cursor: pointer;
 }
 
-div.search-bar {
+form.search-bar {
   display: flex;
   width: 100%;
   min-width: 270px;

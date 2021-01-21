@@ -15,7 +15,8 @@ const Searchbar = () => {
     if (q) setTerm(q);
   }, [q]);
 
-  const searchButtonHandler = () => {
+  const searchButtonHandler = (e) => {
+    e.preventDefault();
     if (!term.trim()) {
       setTerm("");
     } else {
@@ -24,7 +25,7 @@ const Searchbar = () => {
   };
 
   return (
-    <div className="search-bar">
+    <form className="search-bar" onSubmit={(e) => searchButtonHandler(e)}>
       <input
         className="search-bar__field"
         type="text"
@@ -39,7 +40,7 @@ const Searchbar = () => {
       >
         <SearchIcon style={{ color: "var(--color-black-38)" }} />
       </button>
-    </div>
+    </form>
   );
 };
 
