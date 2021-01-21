@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import Input from "../components/Input";
 import List from "../components/List";
 import Button from "../components/Button";
-import "./ProcessEditModal.styles.css";
+// import "./ProcessEditModal.styles.css";
 
 export default function ProcessEditModal({ process, onCancel = null }) {
   const [interessado, setInteressado] = useState("");

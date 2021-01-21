@@ -3,7 +3,11 @@ div.label__info {
   display: flex;
   flex-direction: column;
 }
-
+@media screen and (max-width: 720px) {
+  div.label__info {
+    width: 100%;
+  }
+}
 div.label__info:first-child {
   width: 180px;
   display: flex;

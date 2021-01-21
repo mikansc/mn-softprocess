@@ -22,8 +22,19 @@ form.form-row {
   padding: 0.25em 0;
   margin: 0.5em 0;
 }
+
 div.form-column {
   width: 50%;
+}
+
+@media screen and (max-width: 540px) {
+  div.form-row,
+  form.form-row {
+    flex-direction: column;
+  }
+  div.form-column {
+    width: 100%;
+  }
 }
 
 div.form-footer {

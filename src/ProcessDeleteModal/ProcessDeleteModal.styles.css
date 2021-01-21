@@ -3,3 +3,11 @@ div.delete-modal-footer {
   display: flex;
   flex-direction: row-reverse;
 }
+
+@media screen and (max-width: 540px) {
+  div.delete-modal-footer {
+    flex-direction: column;
+    padding: 2em 0;
+    gap: 2em;
+  }
+}

@@ -12,6 +12,13 @@ article.card {
   cursor: pointer;
 }
 
+@media screen and (max-width: 790px) {
+  article.card,
+  article.card.selected {
+    overflow: auto;
+  }
+}
+
 article.card.selected {
   border: 3px solid var(--color-primary);
   color: var(--color-primary);

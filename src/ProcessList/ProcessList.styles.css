@@ -12,3 +12,13 @@ div.process-content__left {
 div.process-content__right {
   width: 160%;
 }
+
+@media screen and (max-width: 720px) {
+  section.process-content {
+    flex-direction: column-reverse;
+    gap: 1em;
+  }
+  div.process-content__right {
+    width: 100%;
+  }
+}

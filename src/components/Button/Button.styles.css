@@ -9,6 +9,12 @@ button.btn {
   text-transform: uppercase;
 }
 
+@media screen and (max-width: 540px) {
+  button.btn {
+    margin-right: 0;
+  }
+}
+
 button.btn.primary {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);

@@ -1,6 +1,7 @@
 import { useHistory } from "react-router-dom";
 import Button from "../components/Button";
 import ProcessAPI from "../services/AxiosProcessService";
+import "./ProcessDeleteModal.styles.css";
 
 export default function ProcessDeleteModal({ process, onCancel }) {
   const history = useHistory();

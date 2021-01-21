@@ -4,7 +4,7 @@ main.default-container {
   min-height: 100%;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 580px) {
   main.default-container {
     width: 95%;
     padding: 1em 0;
