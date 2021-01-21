@@ -13,6 +13,17 @@ div.home-content {
   align-items: center;
 }
 
+div.home-content > span {
+  font-size: inherit;
+}
+
+@media screen and (max-width: 425px) {
+  div.home-content > span {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
 h2.home-content__title {
   width: 100%;
   text-align: center;
