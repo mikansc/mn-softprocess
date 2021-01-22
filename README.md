@@ -1,8 +1,8 @@
 <p align="center">
       
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/mikansc/mn-dsdelivery">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/mikansc/mn-softprocess">
   <a href="https://github.com/mikansc/mn-dsdelivery/commits/main">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mikansc/mn-dsdelivery">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mikansc/mn-softprocess">
   </a>
 </p>
 
