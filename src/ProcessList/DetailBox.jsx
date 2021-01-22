@@ -26,7 +26,7 @@ const DetailBox = ({ selectedProcess }) => {
       <aside className="detail-box-container">
         <div className="detail-header">
           <div className="detail-img">
-            <img src={imagePlaceholder} alt={""} />
+            <img src={imagePlaceholder} alt={selectedProcess.numero} />
           </div>
           <div className="detail-data">
             <div className="detail-info">
@@ -42,12 +42,13 @@ const DetailBox = ({ selectedProcess }) => {
               </span>
             </div>
             <div className="detail-info">
-              <h2 className="global-subtitle textcolor-black-54">Processo</h2>
+              <h2 className="global-subtitle textcolor-black-54">Assunto</h2>
               <span className="global-headline textcolor-black-87">
                 {selectedProcess.assunto}
               </span>
             </div>
           </div>
+          X
         </div>
         <div className="detail-content">
           <List title="Interessados" items={selectedProcess.interessados} />
