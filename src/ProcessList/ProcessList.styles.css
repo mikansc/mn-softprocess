@@ -2,6 +2,7 @@ section.process-content {
   margin: 2em 0;
   width: 100%;
   display: flex;
+  position: relative;
 }
 
 section.process-content > * + * {
