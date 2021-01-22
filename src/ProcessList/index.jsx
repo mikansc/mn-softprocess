@@ -45,8 +45,9 @@ const ProcessList = () => {
     <DefaultPage>
       <section className="process-content">
         <div className="process-content__left">
-          {loading ? <p>Carregando...</p> : null}
-          {processList.length > 0 ? (
+          {loading ? (
+            <p>Carregando...</p>
+          ) : processList.length > 0 ? (
             processList.map((process) => (
               <Card
                 key={process.id}
