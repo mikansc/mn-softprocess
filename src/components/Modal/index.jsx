@@ -1,6 +1,6 @@
 import ReactDOM from "react-dom";
 
-import CloseIcon from "@material-ui/icons/Close";
+import CloseBtn from "../CloseBtn";
 
 const MODAL_STYLES = {
   zIndex: 10,
@@ -25,16 +25,6 @@ const CONTENT_STYLES = {
   boxShadow: "5px 10px 10px rgba(0, 0, 0, 0.3)",
 };
 
-const CLOSE_BUTTON_STYLES = {
-  zIndex: 25,
-  float: "right",
-  maxWidth: "840px",
-  backgroundColor: "transparent",
-  padding: "0.25em",
-  cursor: "pointer",
-  border: "none",
-};
-
 export default function Modal({ open, onClose, children }) {
   if (!open) return null;
 
@@ -45,9 +35,7 @@ export default function Modal({ open, onClose, children }) {
   return ReactDOM.createPortal(
     <div style={MODAL_STYLES}>
       <div style={CONTENT_STYLES}>
-        <button style={CLOSE_BUTTON_STYLES} onClick={closeButtonHandler}>
-          <CloseIcon />
-        </button>
+        <CloseBtn onClose={closeButtonHandler} />
         <div>{children}</div>
       </div>
     </div>,
