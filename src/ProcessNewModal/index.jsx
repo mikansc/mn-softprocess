@@ -22,8 +22,8 @@ export default function ProcessNewModal({ close = null }) {
     }
   };
 
-  const deleteInteressadoHandler = (name) => {
-    const filtered = interessados.filter((person) => !person.includes(name));
+  const deleteInteressadoHandler = (filterIdx) => {
+    const filtered = interessados.filter((_, index) => index !== filterIdx);
     setInteressados(filtered);
   };
 

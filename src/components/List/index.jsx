@@ -11,10 +11,7 @@ export default function List({ title, items, canEdit, onDelete }) {
             <li key={`${name}-${idx}`}>
               {name}
               {canEdit && (
-                <button
-                  className="delete-button"
-                  onClick={() => onDelete(name)}
-                >
+                <button className="delete-button" onClick={() => onDelete(idx)}>
                   <DeleteIcon
                     style={{ fontSize: 16, color: "var(--color-black-54)" }}
                   />
