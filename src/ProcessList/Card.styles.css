@@ -7,9 +7,12 @@ article.card {
   margin-bottom: 1.5em;
   display: flex;
   align-items: center;
-  gap: 2em;
   overflow: hidden;
   cursor: pointer;
+}
+
+article.card > * + * {
+  margin: 0 0 0 2em;
 }
 
 @media screen and (max-width: 790px) {
@@ -40,7 +43,10 @@ div.card__full {
   height: 100%;
   display: flex;
   justify-content: flex-start;
-  gap: 1em;
+}
+
+div.card__full > * + * {
+  margin: 0 0 0 1em;
 }
 
 div.card__small {
@@ -48,5 +54,5 @@ div.card__small {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  margin: 0.5em 0.5em;
 }

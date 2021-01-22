@@ -2,7 +2,10 @@ section.process-content {
   margin: 2em 0;
   width: 100%;
   display: flex;
-  gap: 1em;
+}
+
+section.process-content > * + * {
+  margin: 0 0 0 1em;
 }
 
 div.process-content__left {
@@ -16,8 +19,11 @@ div.process-content__right {
 @media screen and (max-width: 720px) {
   section.process-content {
     flex-direction: column-reverse;
-    gap: 1em;
   }
+  section.process-content > * + * {
+    margin: 0 0 1em 0;
+  }
+
   div.process-content__right {
     width: 100%;
   }

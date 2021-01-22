@@ -16,7 +16,6 @@ div.form-row,
 form.form-row {
   width: 100%;
   display: flex;
-  gap: 1em;
   justify-content: space-between;
   align-items: flex-end;
   padding: 0.25em 0;
@@ -27,6 +26,11 @@ div.form-column {
   width: 50%;
 }
 
+div.form-row > * + *,
+form.form-row > * + * {
+  margin: 0 0 0 1em;
+}
+
 @media screen and (max-width: 540px) {
   div.form-row,
   form.form-row {
@@ -34,6 +38,11 @@ div.form-column {
   }
   div.form-column {
     width: 100%;
+  }
+
+  div.form-row > * + *,
+  form.form-row > * + * {
+    margin: 1em 0 0 0;
   }
 }
 
@@ -47,6 +56,14 @@ div.form-footer {
   div.form-footer {
     flex-direction: column;
     padding: 2em 0;
-    gap: 2em;
+  }
+
+  div.form-footer > * + * {
+    margin: 2em 0 0 0;
+  }
+
+  div.form-footer {
+    flex-direction: column;
+    padding: 2em 0;
   }
 }
