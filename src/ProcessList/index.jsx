@@ -41,6 +41,11 @@ const ProcessList = () => {
     }
   };
 
+  const closeDetailsHandler = () => {
+    setProcessSelected(null);
+    setHasSelected(false);
+  };
+
   return (
     <DefaultPage>
       <section className="process-content">
@@ -63,7 +68,10 @@ const ProcessList = () => {
         </div>
         {hasSelected && (
           <div className="process-content__right">
-            <DetailBox selectedProcess={processSelected} />
+            <DetailBox
+              selectedProcess={processSelected}
+              onClose={closeDetailsHandler}
+            />
           </div>
         )}
       </section>

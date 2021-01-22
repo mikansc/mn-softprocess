@@ -6,8 +6,9 @@ import ProcessEditModal from "../ProcessEditModal";
 import ProcessDeleteModal from "../ProcessDeleteModal";
 import imagePlaceholder from "../assets/images/placeholder.png";
 import "./DetailBox.styles.css";
+import CloseBtn from "../components/CloseBtn";
 
-const DetailBox = ({ selectedProcess }) => {
+const DetailBox = ({ selectedProcess, onClose }) => {
   const [openEditModal, setOpenEditModal] = useState(false);
   const [openDeleteModal, setOpenDeleteModal] = useState(false);
 
@@ -48,7 +49,7 @@ const DetailBox = ({ selectedProcess }) => {
               </span>
             </div>
           </div>
-          X
+          <CloseBtn onClose={onClose} />
         </div>
         <div className="detail-content">
           <List title="Interessados" items={selectedProcess.interessados} />
