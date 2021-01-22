@@ -1,70 +1,61 @@
-# Getting Started with Create React App
+<p align="center">
+      
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/mikansc/mn-dsdelivery">
+  <a href="https://github.com/mikansc/mn-dsdelivery/commits/main">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mikansc/mn-dsdelivery">
+  </a>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+SOFTPROCESS
+</h1>
 
-## Available Scripts
+Projeto desenvolvido durante o desafio II do curso DEVInHouse SENAI, ACATE e Softplan.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+<h2>Sobre o projeto </h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O projeto consiste em um sistema de cadastramento e consulta de processos, seguindo um guideline e um mockup gráfico disponibilizado pelo curso.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Minha decisão foi a de seguir os estilos exigidos pelo guidelline e usar o mockup do layout como referência de posicionamento.
 
-### `npm test`
+Algumas decisões de design:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Componentização de elementos que se repetiam pelo layout;
+- Criação de um componente de layout chamado "ModalContainer", com sub-componentes ao estilo framework de componentes UI;
+- Separação dos services por domínio
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h2>Como executar o projeto </h2>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para executar o front-end localmente:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```console
+$ git clone https://github.com/mikansc/mn-softprocess
+$ cd mn-softprocess
+$ npm install
+$ npm start
+```
 
-### `npm run eject`
+Para executar o projeto usando Docker
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```console
+$ git clone https://github.com/mikansc/mn-softprocess
+$ cd mn-softprocess
+$ docker-compose up -d
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<h2>Autor</h2>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<a href="http://www.mkwebdev.com.br/">
+ <img style="border-radius: 50%;" src="https://avatars2.githubusercontent.com/u/35317401?s=460&u=53f0a76fbf41bafa9f776c73d87ba73aefe0ff62&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Michael Nascimento</b></sub></a> <a href="https://www.linkedin.com/in/michaelnsc/" title="Michael no Linkedin"></a>
+ <br />
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[![Linkedin Badge](https://img.shields.io/badge/-Michael-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/michaelnsc/)](https://www.linkedin.com/in/michaelnsc/)
+[![Microsoft Badge](https://img.shields.io/badge/-michael.nsc@outlook.com-blue?style=flat-square&logo=Microsoft&logoColor=white&link=mailto:michael.nsc@outlook.com)](mailto:michael.nsc@outlook.com)
